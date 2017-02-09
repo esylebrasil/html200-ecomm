@@ -55,3 +55,5 @@ var products = [
     }
 
   console.log(products[key].name) 
+  
+
