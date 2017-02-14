@@ -7,6 +7,8 @@
 
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Rochester" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet"> 
 
   <!-- replace with your personal Font Awesome CDN link -->
   <script src="https://use.fontawesome.com/eee0008cc4.js"></script>
@@ -14,8 +16,9 @@
 
 <body>
   <header>
-    <nav>
-      <ul>
+    <h1>Winter Wear Warehouse</h1>
+    <nav class="topnav">
+      <ul class="site-nav">
         <li><a href="#">Hats</a></li>
         <li><a href="#">Gloves</a></li>
         <li><a href="#">Scarves</a></li>
@@ -24,14 +27,12 @@
         </li>
       </ul>
     </nav>
-
-    <h1>Winter Wear Warehouse</h1>
   </header>
 
   <aside>
-    <form>
+    <form name="sortBy" onSubmit="capture()";>
       <label>Filter By:
-        <select name="filter">
+        <select name="filter" class="sort">
           <option value="">Choose One</option>
           <option value="price">Price</option>
           <option value="name">Name</option>
@@ -51,9 +52,9 @@
         <div class="thumbnail">
           <img src="images/wool-cable.jpeg" alt="wool cable scarf">
         </div>
-        <div class="details">
-          <h4>Wool Cable Knit</h4>
-          <p>Price: $49.99</p>
+        <div>
+          <h3>Wool Cable Knit</h3>
+          <p><strong>Price:</strong> $49.99</p>
           <p>Desription: Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</p>
         </div>
       </div>

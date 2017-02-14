@@ -49,11 +49,13 @@ var products = [
   }
   ]
   
-  for (var key in products) {
-    console.log(key); 
-    console.log(products[key]); 
-    }
-
-  console.log(products[key].name) 
+  for(var i = 0; i < products.length; i++){
+    var obj = products[i];
   
+    console.log("Product: " +obj.name + " Description: " + obj.description + " Price: " + obj.catpprice);
+  }
 
+function capture() {
+  console.log(document.sortBy.filter.value); 
+  event.preventDefault(); 
+}

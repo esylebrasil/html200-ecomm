@@ -1,0 +1,119 @@
+/* Body Style */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  clear: both; 
+  }
+
+header {
+  /*display: flex; */
+  justify-content: center;
+  align-items: center;
+  background-color: #A4A4A4; 
+  height: 5.5rem;
+  padding: 1.25em;  
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Start Site Naviation Styling */
+.topnav {
+  display: flex;
+  float: left;  
+  width: 100%; 
+  font-size: 1.25rem; 
+}
+
+ul.site-nav {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;  
+}
+
+ul.site-nav li {
+  display: inline-flex; 
+  color: black;   
+  flex: 1 1 100%;
+}
+
+ul.site-nav li a {
+  color: black; 
+  text-align: center; 
+  padding: 1rem; 
+  text-decoration: none; 
+  font-size: 1.25rem;
+}
+
+ul.site-nav li a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+section { 
+  padding: .25em .75em 4.5em; 
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-size: 1em;
+  padding: .15em; 
+}
+
+h1 {
+  font-family: 'Rochester', cursive;
+  color: dodgerblue; 
+  font-size: 3em;
+  }
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: dodgerblue;
+  font-size: 1.5em; 
+  padding: .15em; 
+  }
+
+/* Start Aside Styling */
+
+aside { 
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 1em;   
+}
+
+.sort {
+  background-color: white;
+  height: 2rem;
+  padding: .5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  border: .1rem solid #eee;
+}
+
+input[type=submit] {
+  background-color: #A4A4A4;
+  border: .1rem solid black;
+  height: 2rem;
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: .6em .85em .5em;
+}
+
+/* Start Item Styling */
+.item-container {
+  display:  flex; 
+}
+
+.item { 
+  flex: 1; 
+}
+
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.thumbnail img {
+    max-width: 15%;
+}
