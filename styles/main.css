@@ -137,12 +137,13 @@ button[type=submit] {
   padding: 1em; 
 }
 
+/*
 .thumbnail {
     position: relative;
     padding: 0px;
     max-width: 80%;
     margin-bottom: 20px;
-}
+} */
 
 .item-header {
   color: dodgerblue;
