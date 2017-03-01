@@ -94,6 +94,72 @@ section {
   float: left; 
 }
 
+/* Media Query CSS */ 
+
+@media screen and (max-width: 725px) {
+  .name {
+    max-width: 50%; 
+    }
+
+  .container { 
+    align-content: center; 
+    margin-bottom: 0; 
+    width: 50%; 
+  }
+  
+  .topnav {
+    display: flex; 
+    width: 100%; 
+    padding: 1em; 
+  }  
+
+
+  ul.site-nav li {
+    display: inline; 
+    text-align: center;
+    padding: 1em;  
+    font-weight: 600; 
+    font-size: 1.5em;
+  } 
+
+}
+
+@media screen and (max-width: 520px) {
+  .name {
+    max-width: 100%; 
+    font-weight: 600;
+    }
+
+  .container { 
+    max-width: 100%; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .topnav {
+    display: flex; 
+    max-width: 100%; 
+    padding: 1em; 
+  }  
+
+  ul.site-nav li {
+    display: inline; 
+    text-align: center;
+    padding: .5em;   
+    font-weight: 300; 
+    font-size: 1.5em;
+  } 
+
+  .sort {    
+    text-align: left;    
+  }  
+  
+  .item-header {
+    padding-top: 2em; 
+  }
+  
+}
+
 /* Start Aside Styling */
 
 aside { 
@@ -107,9 +173,6 @@ aside {
   height: 2rem;
   font-family: 'Josefin Sans', sans-serif;
   padding: 0; 
-}
-
-.form-control {
 }
 
 button[type=submit] {
@@ -127,6 +190,7 @@ button[type=submit] {
 }
 
 /* Start Item Styling */
+
  .item-container {
   display:  flex; 
   flex-wrap: wrap; 
@@ -136,14 +200,6 @@ button[type=submit] {
   margin: 1em; 
   padding: 1em; 
 }
-
-/*
-.thumbnail {
-    position: relative;
-    padding: 0px;
-    max-width: 80%;
-    margin-bottom: 20px;
-} */
 
 .item-header {
   color: dodgerblue;
@@ -158,5 +214,3 @@ button[type=submit] {
   font-size: 1.25em; 
   font-weight: 300;
 }
-
-
