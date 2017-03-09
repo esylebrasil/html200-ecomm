@@ -1,3 +1,5 @@
+var cart = [ ]; 
+
 var products = [
   {
     "name": "Reversible Plaid",
@@ -52,31 +54,78 @@ var products = [
   for(var i = 0; i < products.length; i++){
     var obj = products[i];
   
-    console.log("Product: " +obj.name + " Description: " + obj.description + " Price: " + obj.catpprice);
+    console.log("Product: " +obj.name + " Description: " + obj.description + " Price: " + obj.price);
   }
 
-function capture() {
-  console.log(document.sortBy.filter.value); 
-  event.preventDefault(); 
-}
 
-function sumPrices(cartArray)  {
-  // for loop through array, sum value of price attribute for each object
-  var total = 0; 
+function filterProducts() {
+//  console.log("Filter by: " + document.sortBy.filter.value); 
   
-  
-  for(var i=0; i<cartArray.length; i++) {
+
+  var sortMethod = document.sortBy.filter.value; 
+    if(sortMethod == "name") {
+      sortByName(); 
+    }
+
+  else if (sortMethod == "price") {
+    {
+    sortByPrice(); 
+    }
     
-    if(cartArray[i].price){
-       total = total + cartArray[i].price; 
-       } 
+    console.log(sortMethod); 
   }  
-  
-  // To Do:  print total as HTML to page, next to cart icon //
-  console.log(total); 
+  event.preventDefault();
+}
+
+function sortByName(){
+  products.sort(function(a,b){
+    if(a.name.toLowerCase() < b.name.toLowerCase())
+      return -1;
+    if(a.name.toLowerCase() > b.name.toLowerCase())
+      return 1;
+    return 0;
+  });
+  console.log(products);
+}
+
+function sortByPrice() {
+  products.sort(function(a,b){
+    return a.price - b.price;
+});
+  console.log(products);
 }
 
 
+/* Add items to the shopping cart */
+function addItem(item) {
+  
+  var ProductIndex = cart.indexOf(item);
+  if (ProductIndex <= 0) {
+    cart.push(item);
+  }
+  console.log(cart);
+}
 
+/* Remove items from shopping cart */
+function removeItem(item) {
+  var ProductIndex = cart.indexOf(item);
+  if (ProductIndex != -1) {
+    cart.splice(ProductIndex, 1);
+  }
+  console.log(cart);
+}
 
+//TO DO: trigger on change of cart contents
+function sumPrices(cartArray) {
+  // for loop through array, sum value of price attributes for each object
+  var total = 0;
+  
+  for(var i= 0; i < cartArray.length; i++) {
 
+    if(cartArray[i].price){
+          total = total + cartArray[i].price;
+    }
+  }
+
+  console.log(total);
+}
