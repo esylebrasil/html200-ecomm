@@ -71,8 +71,7 @@ function filterProducts() {
     {
     sortByPrice(); 
     }
-    
-    console.log(sortMethod); 
+    //console.log(sortMethod); 
   }  
   event.preventDefault();
 }
@@ -103,7 +102,9 @@ function addItem(item) {
   if (ProductIndex <= 0) {
     cart.push(item);
   }
-  console.log(cart);
+  //console.log(cart);
+    var total = document.getElementById("total"); 
+    total.innerHTML = cart.length; 
 }
 
 /* Remove items from shopping cart */
@@ -112,12 +113,15 @@ function removeItem(item) {
   if (ProductIndex != -1) {
     cart.splice(ProductIndex, 1);
   }
-  console.log(cart);
+  
+  var total = document.getElementById("total"); 
+  total.innerHTML = cart.length; 
+  
+  //console.log(cart);
 }
 
 //TO DO: trigger on change of cart contents
 function sumPrices(cartArray) {
-  // for loop through array, sum value of price attributes for each object
   var total = 0;
   
   for(var i= 0; i < cartArray.length; i++) {
@@ -125,7 +129,12 @@ function sumPrices(cartArray) {
     if(cartArray[i].price){
           total = total + cartArray[i].price;
     }
-  }
-
+  }  
+   
   console.log(total);
 }
+
+
+
+
+

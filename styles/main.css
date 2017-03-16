@@ -50,6 +50,11 @@ header img {
   font-size: 1.25rem;   
 }  
 
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; 
+  }
+}
 
 ul.site-nav li {
   display: inline-block; 
@@ -79,10 +84,30 @@ ul.site-nav li a:hover{
 .name {
   color: dodgerblue; 
   font-size: 3em; 
-  max-width: 10em; 
-  padding-top: .5em;
-  font-weight: 600; 
+  max-width: 20%; 
+  display: inline-block; 
   }
+
+@media screen and (max-width: 500px) {
+  .name {
+    width: 50%; 
+    font-size: 1em; 
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .name {
+    width: 50%; 
+    font-size: 3em; 
+  }
+}
+
+@media screen and (max-width: 1394px) {
+  .name {
+    width: 100%; 
+    font-size: 2.75em; 
+  }
+}
 
 section { 
   padding: .25em .75em 4.5em; 
@@ -95,11 +120,6 @@ section {
 }
 
 /* Media Query CSS */ 
-
-@media screen and (max-width: 725px) {
-  .name {
-    max-width: 50%; 
-    }
 
   .container { 
     align-content: center; 
@@ -166,6 +186,7 @@ aside {
   font-family: 'Josefin Sans', sans-serif; 
   padding: 2em; 
   float: left; 
+  margin-bottom: 2em; 
 }
 
 .sort {
@@ -180,7 +201,7 @@ button[type=submit] {
   color: black; 
   font-weight: 600; 
   border: .1rem solid black; 
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif; 
 }
 
 .filter-lable {
@@ -188,6 +209,7 @@ button[type=submit] {
   font-weight: 600; 
   align-content: space-between; 
 }
+
 
 /* Start Item Styling */
 
@@ -214,3 +236,9 @@ button[type=submit] {
   font-size: 1.25em; 
   font-weight: 300;
 }
+
+/* Add Remove from Cart Button Styling */
+button[type="button"] {
+  margin-bottom: .2em; 
+}
+
